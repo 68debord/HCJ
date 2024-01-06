@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         p {
-            color:blue;
+            color:red;
             font-size: 20px;
             width: 200px;
         }
@@ -15,10 +15,26 @@
             font-size: 36px;
             text-align: center;
         }
+        /* creating a CSS class selector named blue */
+        .blue { 
+            color: blue;
+        }
+        /* creating a id selector, linked to div id in html */
+        #name{
+            color: orange;
+        }
+        /* can combine selectors in one declaration */
+        h2, .pink {
+            color:pink;
+        }
     </style>
 </head>
 <body>
     <h1>time for css baby</h1>
     <p>let's gooooo</p>
+    <p class="blue">blue instead</p>
+    <div id="name">now orange inna div</div>
+    <h2>this should be pink</h2>
+    <p class="pink">and so should this!</p>
 </body>
 </html>
