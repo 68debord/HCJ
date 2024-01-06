@@ -15,17 +15,72 @@
             font-size: 36px;
             text-align: center;
         }
-        /* creating a CSS class selector named blue */
+        /* creating a CSS class selector named blue - class can be reused in html doc */
         .blue { 
             color: blue;
         }
-        /* creating a id selector, linked to div id in html */
+        /* creating a id selector, linked to div id in html - id can be used once in html doc */
         #name{
             color: orange;
         }
         /* can combine selectors in one declaration */
         h2, .pink {
             color:pink;
+        }
+        /* combined element + specific class */
+        p.big {
+            font-size: 20px;
+        }
+        /* child selector - targets DIRECT p children of article elements */
+        article > p {
+            color: blue;
+        }
+        /* descendant selector - targets EVERY p child of article elements */
+        article p {
+            color: blue;
+        }
+        /* combine two class selectors */
+        .highlight.mainpoint{
+            color: green;
+        }
+        /* now some pseudo class selectors - format below */
+        /* many psuedo class selectors exist */
+        selector:pseudo-class{
+
+        }
+        /* unordered list styled as a menu */
+        /* first turn off default style (bullet points) */
+        header li {
+            list-style: none;
+        }
+        /* now gonna style the links that are in the list */
+        a:link, a:visited {
+            text-decoration: none;
+            background-color: green;
+            border: 1px solid blue;
+            color: black;
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin-bottom: 1px;
+        }
+        /* now style when hovered */
+        a:hover, a:active{
+            background-color: red;
+            color: purple;
+        }
+        /* target third element in header list */
+        header li:nth-child(3) {
+            font-size: 24px;
+        }
+        /* target odd divs within section */
+        section div:nth-child(odd) {
+            background-color: grey;
+        }
+
+        section div:nth-child(4):hover{
+            background-color: green;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -36,5 +91,37 @@
     <div id="name">now orange inna div</div>
     <h2>this should be pink</h2>
     <p class="pink">and so should this!</p>
+    <p class="big">more examples of selectors in html style section</p>
+    <h1>unordered list for psuedo class selectors</h1>
+    <header>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+          <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+        </ul>
+    </header>
+    <h1>list for odd nth-child divs inside section</h1>
+    <section>
+        <div>DIV 1</div>
+        <div>DIV 2</div>
+        <div>DIV 3</div>
+        <div>DIV 4</div>
+        <div>DIV 5</div>
+        <div>DIV 6</div>
+        <div>DIV 7</div>
+        <div>DIV 8</div>
+        <div>DIV 9</div>
+        <div>DIV 10</div>
+        <div>DIV 11</div>
+        <div>DIV 12</div>
+        <div>DIV 13</div>
+        <div>DIV 14</div>
+        <div>DIV 15</div>
+        <div>DIV 16</div>
+        <div>DIV 17</div>
+        <div>DIV 18</div>
+        <div>DIV 19</div>
+        <div>DIV 20</div>
+      </section>
 </body>
 </html>
